@@ -1,0 +1,22 @@
+.container{
+    background-color: rgba(0, 0, 0, 0.699);
+    width: 479px;;
+    height: 624px;
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+
+.isVisible{
+    display: flex;
+}
+
+.box{
+    background-color: #F5E5FC;
+    max-width: 70%;;
+    margin: auto auto;
+    height: 75%;
+    border-radius: 10px;
+    padding: 50px;
+    border:3px solid #CF4D6F
+}

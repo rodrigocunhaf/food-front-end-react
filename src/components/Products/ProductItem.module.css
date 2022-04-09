@@ -1,0 +1,95 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 480px;
+    width: 100%;
+    left: 0;
+    transition-duration: 2s;
+}
+
+.toRight{
+    left: -101%;
+}     
+
+
+.container:hover .boxImage{
+    filter: grayscale(0);
+}
+
+.boxImage{
+    cursor: pointer;
+    overflow: hidden;
+    border-left: 1px solid white;
+    filter: grayscale(25%);
+    max-height: 624px;
+}
+
+.boxImage:hover{
+    filter: grayscale(0);
+}
+
+.boxImage img{
+    max-width: 150%;
+    
+}
+
+.boxInfo{
+    background-color: black;
+    border-right: 1px solid #F5E5FC;
+    border-left: 1px solid white;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+.boxController{
+    background-color: #424651;
+    border:1px solid #F5E5FC;
+    height: 100px ;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.boxController input{
+    width: 70px;
+    height: 70px;
+    border: 0;
+    margin: auto auto;
+    text-align: center;
+    font-size: 25px;
+    border:1px solid white;
+    background-color:#1B998B ;
+    border-radius: 22px;
+}
+
+.boxController input:focus{
+    outline: 0;
+}
+
+.boxController button{
+    width: 80px;
+    height: 50px;
+    margin: auto auto;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #9FD356;
+    border: 0;
+    border-radius: 7px;
+}
+
+.boxController button:hover{
+    transform: scale(1.1);
+    transition-duration: 250ms;
+    box-shadow: 0 0 3px 0.8px black;
+}
+
+.boxController button:disabled{
+    background-color: gray;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 black;
+    color: black;
+}

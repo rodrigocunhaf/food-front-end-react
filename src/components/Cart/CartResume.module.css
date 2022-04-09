@@ -1,0 +1,35 @@
+.boxButton button{
+    background-color:#1B998B;
+    padding: 15px;
+    width: 150px;
+    margin: 10px;
+    font-size: 18px;
+    border:0;
+    border-radius: 7px;
+    transition-duration: 500ms1;
+    cursor: pointer;
+
+}
+
+.boxButton button:hover{
+    box-shadow: 0 0 3px 1px black;
+}
+
+.boxButton button:disabled{
+    background-color: gray;
+    color: black;
+    box-shadow: 0 0 0 0px black;
+}
+
+.boxTotal{
+    text-align: center;
+}
+
+.boxTotal p{
+    margin-left: 32px;
+    background-color: #9FD356;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 25px;
+    min-width: 150px;
+}

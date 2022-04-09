@@ -1,0 +1,76 @@
+.container{
+    background-color: white;
+    width: 464px;
+    height: 783px;
+    position: absolute;
+    z-index: 1;
+    right: -64px;
+    top: 67px;
+    border: 1px solid black;
+}
+
+.boxList{
+    padding: 20px;
+    height: 545px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.notFound{
+    padding: 20px;
+    height: 545px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+.notFound p {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+.notFound img{
+    max-width: 150px;
+    margin: auto;
+}
+
+.buyInfo{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border-top: 1px solid gray;
+    margin:  20px  20px 20px 20px;
+}
+
+.boxButton button{
+    background-color:#1B998B;
+    padding: 15px;
+    width: 150px;
+    margin: 10px;
+    font-size: 18px;
+    border:0;
+    border-radius: 7px;
+    transition-duration: 500ms1;
+    cursor: pointer;
+
+}
+
+.boxButton button:hover{
+    box-shadow: 0 0 3px 1px black;
+}
+
+.boxButton button:disabled{
+    background-color: gray;
+    color: black;
+    box-shadow: 0 0 0 px black;
+}
+
+.boxTotal p{
+    margin-left: 32px;
+    background-color: #9FD356;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 25px;
+}

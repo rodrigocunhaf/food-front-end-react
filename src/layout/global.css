@@ -1,0 +1,22 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+.paletts{
+    color:#9FD356;
+    color:#1B998B;
+    color:#CF4D6F;
+    color:#424651;
+    color:#F5E5FC
+}

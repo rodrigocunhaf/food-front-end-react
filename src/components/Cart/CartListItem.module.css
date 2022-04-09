@@ -1,0 +1,40 @@
+.container{
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding:0 10px 0 10px
+}
+
+.container:not(:nth-child(1)){
+    border-top: 1px solid gray;
+}
+
+
+.container p:nth-child(1){
+    width: 150px;
+}
+
+.boxButton{
+    display: flex;
+    min-width: 66px;
+    max-width: 66px;
+    margin:auto auto;
+}
+
+.boxButton button{
+    width: 20px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+}
+
+.boxButton button:nth-child(1){
+    background-color: red;
+    margin-right: 5px;
+}
+
+.boxButton button:nth-child(3){
+    background-color: green;
+    margin-left: 5px;
+
+}

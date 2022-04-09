@@ -1,0 +1,43 @@
+.container{
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+    transition-duration: 10s;    
+}
+
+.boxContent{
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+.boxContent .buttonRight {
+    position: absolute;
+    bottom: 20%;
+    height:  500px;
+    cursor: pointer;
+    right: -1px;
+    width: 29px;
+    opacity: 0;
+}
+
+.boxContent .buttonLeft {
+    position: absolute;
+    bottom: 20%;
+    height: 637px;
+    cursor: pointer;
+    width: 30px;
+    z-index: 1;
+    opacity: 0;
+}
+
+.loading{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 782px;
+    max-width: 1920px;
+    width: 100%;
+}
