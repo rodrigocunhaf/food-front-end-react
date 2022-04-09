@@ -2,6 +2,24 @@ import React, { useContext, useEffect, useState } from "react";
 import style from "./ProductItem.module.css";
 import { ProductDescription } from "./ProductDescription";
 import { CartContext } from "../../context/CartContext";
+import styled from 'styled-components';
+
+
+
+const CardBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: ${ props => props.widowWidth < 768 ? window.screen.width+'px' :  '480px' };
+    max-height: 788px;
+    width: 100%;
+    left: 0;
+    transition-duration: 2s;
+`
+
+
+
+
 const ProductItem = ( props ) => {
 
     const [ productQuanty, setProductQuanty ] = useState(0);
@@ -51,11 +69,13 @@ const ProductItem = ( props ) => {
     },[productQuanty]);
 
 
-    const classCSS = `${style.container} ${ props.move ? style.toRight : ''}`
+    const classCSS = `${style.container} ${ props.move ? style.toRight : ''}`;
 
     return ( 
-        <li className={classCSS}>
-            <div className={style.boxImage}>
+        <CardBox widowWidth={window.screen.width}>
+            <div className={style.boxImage} style={{
+                maxHeight:50+'%',
+            }}>
                 <img src={props.image}/>
                 <ProductDescription isVisible={infoIsVisible}/>
             </div>
@@ -72,7 +92,7 @@ const ProductItem = ( props ) => {
                         value={productQuanty}/>
                 <button onClick={addItem} disabled={quantyIsValid}>Add</button>
             </div>
-        </li>
+        </CardBox>
     );
 };
 

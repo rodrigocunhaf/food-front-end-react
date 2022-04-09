@@ -3,6 +3,7 @@
     flex-direction: column;
     position: relative;
     min-width: 480px;
+    max-height: 788px;
     width: 100%;
     left: 0;
     transition-duration: 2s;
@@ -23,6 +24,7 @@
     border-left: 1px solid white;
     filter: grayscale(25%);
     max-height: 624px;
+    min-height: 624px;
 }
 
 .boxImage:hover{
@@ -30,7 +32,7 @@
 }
 
 .boxImage img{
-    max-width: 150%;
+    max-width: 105%;
     
 }
 
@@ -92,4 +94,51 @@
     transform: scale(1);
     box-shadow: 0 0 0 0 black;
     color: black;
+}
+
+
+
+
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    .container{
+        min-width: 384px;
+    }
+
+    .boxImage{
+        max-height: 539px;
+        min-height: unset;
+    }
+}
+
+
+@media screen and (min-width:1024px) and (max-width:1365px){
+    .container{
+        min-width: 256px;
+    }
+
+    .boxImage{
+        max-height: 337px;
+        min-height: unset;
+    }
+
+    .toRight{
+        left: -99.8%;
+    }
+}
+
+
+@media screen and (min-width:1366px) and (max-width:1919px){
+    .container{
+        min-width: 341px;
+    }
+
+    .boxImage{
+        min-height: unset;
+        max-height: 450px ;
+    }
+
+    .toRight{
+        left: -99.8%;
+    }
 }

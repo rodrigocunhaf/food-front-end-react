@@ -2,8 +2,7 @@
     margin: 0 auto;
     display: flex;
     list-style: none;
-    overflow: hidden;
-    transition-duration: 10s;    
+    overflow: hidden;    
 }
 
 .boxContent{
@@ -40,4 +39,21 @@
     min-height: 782px;
     max-width: 1920px;
     width: 100%;
+}
+
+
+@media screen and (max-width:767px){
+    .container{
+        overflow-x: scroll;
+        padding-bottom: 5px;
+    }
+
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+    .container{
+        overflow: scroll;
+        padding-bottom: 5px;
+    }
 }

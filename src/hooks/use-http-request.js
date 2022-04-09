@@ -17,14 +17,14 @@ const useHttpRequest = () => {
                 if ( functionState ){
                     functionState(response.data);
                 }
-                
-                if ( response.status === 200 ){
-                    setTimeout( ( ) => {
-                        setIsLoading(false)
-                    },2000)    
-                };
+                return response
+            }).then ( response => {
+                setTimeout ( ( ) => {
+                    setIsLoading(false);
+                },2000);
 
-            });
+                
+            })
 
         } catch ( err ) {
             console.log(err)

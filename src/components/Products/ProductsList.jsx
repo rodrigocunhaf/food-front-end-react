@@ -32,7 +32,7 @@ const ProductsList = ( ) => {
     };
 
     return (
-        <div className={style.boxContent}>
+        <div className={style.boxContent} >
             <button onMouseEnter={goToLeft}  className={style.buttonLeft}>{'<'}</button>
             { <ul className={style.container}>
                 { !loading ? products.map ( product=> {
