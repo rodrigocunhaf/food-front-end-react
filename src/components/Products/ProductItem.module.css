@@ -109,6 +109,9 @@
         max-height: 539px;
         min-height: unset;
     }
+    .boxImage img {
+        max-width: 113%;
+    }
 }
 
 

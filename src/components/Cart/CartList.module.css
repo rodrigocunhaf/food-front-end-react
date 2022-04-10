@@ -74,3 +74,9 @@
     padding: 10px;
     font-size: 25px;
 }
+
+@media screen and (max-width:767px) {
+    .container{
+        width: 100vw
+    }
+}

@@ -33,3 +33,10 @@
     font-size: 25px;
     min-width: 150px;
 }
+
+@media screen and (max-width:767px) {
+    .boxTotal p {
+        min-width: unset;
+        font-size: 17px;
+    }
+}
