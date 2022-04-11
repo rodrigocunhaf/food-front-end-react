@@ -1,0 +1,43 @@
+{
+  "TB_FOODS" : [ {
+    "id" : 1,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/pizza.jpg?alt=media&token=89839b50-bac6-4841-ae79-4a9d32efd3e7",
+    "name" : "Pepperoni pizza",
+    "price" : 29.39
+  }, {
+    "id" : 2,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/slicedTomato.jpg?alt=media&token=fe5e5198-aa8e-4723-8216-8fdb1c97e006",
+    "name" : "Sliced bread + Tomato",
+    "price" : 34.99
+  }, {
+    "id" : 3,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/sandwitchAndFries.jpg?alt=media&token=ed631846-cc54-400f-ae14-29c021e2bd18",
+    "name" : "Sandwich + Fries",
+    "price" : 14.55
+  }, {
+    "id" : 4,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/cookies.jpg?alt=media&token=053b3f5b-4c50-417c-8991-5e243da6dc53",
+    "name" : "Cookies",
+    "price" : 22.63
+  }, {
+    "id" : 5,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/raspberrycake.jpg?alt=media&token=1763a806-aeab-447b-b328-93bbf213f1ca",
+    "name" : "Raspberry cake",
+    "price" : 55.27
+  }, {
+    "id" : 6,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/stranberryMilk.jpg?alt=media&token=fd560ea8-ef89-4e98-a7e8-52a9e7f920ca",
+    "name" : "Sliceds Strawberries",
+    "price" : 43.34
+  }, {
+    "id" : 7,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/chocolaty.jpg?alt=media&token=65089869-8ca8-4a51-a464-34d389c5507b",
+    "name" : "Oreo cookie",
+    "price" : 80.22
+  }, {
+    "id" : 8,
+    "image" : "https://firebasestorage.googleapis.com/v0/b/food-order-app-9adbd.appspot.com/o/soup.jpg?alt=media&token=faf1978d-1360-4016-85e9-40861667dfc1",
+    "name" : "Soup",
+    "price" : 15.32
+  } ]
+}
