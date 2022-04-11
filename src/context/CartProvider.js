@@ -21,23 +21,22 @@ const cartReducer = ( state , action ) => {
                 let product =  { ...state.products[productIndex] };
 
                 product.quantity += action.product.quantity;
+                
+                let productItems = state.products;
 
-                state.products[productIndex] = { ...product };
+                productItems[productIndex] = { ...product }
 
-                state.quantity += action.product.quantity;
-
-                state.total += action.product.quantity * action.product.price;
-
-                return { ...state };
+                return {  
+                        products: [...productItems] ,  
+                        quantity: state.quantity += action.product.quantity, 
+                        total: state.total += ( action.product.quantity * action.product.price)  };
             }
-            else { 
-                let updateQuantity = state.quantity += action.product.quantity;
-
-                state.total += action.product.quantity * action.product.price;
-
-                state.total.toFixed(2);
-
-                return { ...state , quantity:updateQuantity ,products: [...state.products, action.product] };
+            else {
+                return {  
+                         quantity:  state.quantity += action.product.quantity,
+                         products: [...state.products, action.product],
+                         total: state.total += ( action.product.quantity * action.product.price )
+                        }        
             }
 
         case 'REMOVE_ONE_PRODUCT_CART':
@@ -50,28 +49,24 @@ const cartReducer = ( state , action ) => {
 
                 productList.splice(productIndex, 1);
 
-                state.products = [ ...productList ];
-
-                state.total -= product.price;
-
-                state.total = Math.abs(state.total);
-
-                state.quantity -= 1;
-
-                return  { ...state };
+                return  { 
+                            products:[ ...productList ],
+                            total: state.total -= product.price,
+                            quantity: Math.abs(state.quantity -= 1)
+                        };
 
             } else {
                 product.quantity -= 1;
 
-                state.products[productIndex] = { ...product };
+                let productList = [...state.products];
 
-                state.total -= product.price;
+                productList[productIndex]  = { ...product }
 
-                state.total = Math.abs(state.total);
-
-                state.quantity -= 1
-
-                return { ...state };
+                return { 
+                    products: [...productList],
+                    total: state.total -= product.price,
+                    quantity: state.quantity -= 1
+                };
             };
 
         case 'ADD_ONE_PRODUCT_CART':
@@ -82,22 +77,20 @@ const cartReducer = ( state , action ) => {
 
             currentProduct.quantity += 1;
 
-            state.products[productIndex] = { ...currentProduct };
+            let productList = [...state.products];
 
-            state.total += currentProduct.price;
+            productList[productIndex] = { ...currentProduct };
 
-            state.quantity += 1
-
-            return { ...state };
-        
-        case 'RESET_CART':
-            return { ...state , products:[], quantity: 0 , total: 0};
+            return { 
+                products: [...productList],
+                total: state.total += currentProduct.price,
+                quantity:  state.quantity += 1
+             };
     
         default:
             return{  products:[], quantity:0, total: 0  };
     };
 };
-
 
 const CartProvider = ( props ) => {
 
@@ -116,8 +109,11 @@ const CartProvider = ( props ) => {
     };
     
     const goResetCart = ( ) => {
-        return dispatchCart({type:'RESET_CART'})
+        return dispatchCart({type:"RESET"})
     };
+
+
+    console.log(cart)
 
     return (
         <CartContext.Provider value={{...cart, 
