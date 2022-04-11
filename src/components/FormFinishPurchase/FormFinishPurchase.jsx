@@ -79,6 +79,7 @@ const FormFinishPurchase = (props ) => {
         resetLastname();
         resetEmail();
         resetAddress();
+        props.showModalConfirmation();
         cartContext.resetCart();
     };
 

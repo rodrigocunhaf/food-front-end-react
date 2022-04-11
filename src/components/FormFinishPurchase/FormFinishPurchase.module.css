@@ -90,3 +90,10 @@
     border-top: 1px solid gray;
     margin:  20px  20px 20px 20px;
 }
+
+
+@media screen and (max-width:767px) {
+    .box{
+        min-height: 63vh;
+    }
+}

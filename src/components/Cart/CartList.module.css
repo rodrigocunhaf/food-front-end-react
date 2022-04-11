@@ -79,4 +79,12 @@
     .container{
         width: 100vw
     }
+
+    .boxList{
+        height: 61vh;
+    }
+
+    .notFound{
+        height: 61vh;
+    }
 }

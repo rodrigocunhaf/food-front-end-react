@@ -1,0 +1,32 @@
+.container{
+    height: 61vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.container p{
+    font-size: 25px;
+}
+
+.container button{
+    height: 50px;
+    margin-top: 30px;
+    width: 100px;
+    margin: 30px auto 0 auto ;
+    cursor: pointer;
+    background-color: #1B998B;
+    border: 0;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+}
+
+.container button:hover{
+    box-shadow: 0 0 3px 1px black;
+}

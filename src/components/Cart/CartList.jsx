@@ -6,6 +6,7 @@ import cartNotFound from "../../assets/icons/cart-not-found.png";
 import { FormFinishPurchase } from "../FormFinishPurchase/FormFinishPurchase.jsx"
 import { CartResume } from "./CartResume";
 import { CloseButton } from "../CloseButton/CloseButton";
+import { ModalConfirmation } from "../ModalConfirmation/ModalConfirmation";
 
 const CartList = ( props ) => {
 
@@ -14,6 +15,7 @@ const CartList = ( props ) => {
     //Control Form or CartList is visible ?
     const [isVisibleForm, setIsVisibleForm ] =  useState(false);
 
+    const [modalConfirmationIsVisible, setModalConfirmationIsVisible ] = useState(false);
 
     //Button 'PURCHASE' disable on CartList ?
     const purchaseDisable = cartContext.products.length > 0 ? false : true;
@@ -22,11 +24,21 @@ const CartList = ( props ) => {
         setIsVisibleForm(!isVisibleForm);
     };
 
+    const showModalConfirmation = ( ) => {
+        setIsVisibleForm(false);
+        setModalConfirmationIsVisible(true);
+    };
+
+    const closeModalAndForm = ( ) => {
+        setIsVisibleForm(false);
+        setModalConfirmationIsVisible(false);
+    };
+
     return (
         <React.Fragment>
             {
                 //<----------------------CART--LIST----------------------->
-                props.isVisible &&  !isVisibleForm &&
+                props.isVisible &&  !isVisibleForm && !modalConfirmationIsVisible &&
                     <div className={style.container}>
                         <CloseButton onClickEvent={ props.onClickEvent}/>
                         { cartContext.products.length > 0 ? <ul className={style.boxList}>
@@ -51,10 +63,17 @@ const CartList = ( props ) => {
         
             {
                 //<----------------------CART-FORM----------------------->
-                props.isVisible && isVisibleForm && <div className={style.container}>
-                    <FormFinishPurchase total={cartContext.total} onClickEvent={onClickPurchaseHandler}/>
+                props.isVisible && isVisibleForm  && !modalConfirmationIsVisible && <div className={style.container}>
+                    <FormFinishPurchase total={cartContext.total} onClickEvent={onClickPurchaseHandler} showModalConfirmation={showModalConfirmation}/>
                 </div>
                 //<----------------------CART--FORM----------------------->
+            }
+
+            {
+                props.isVisible && !isVisibleForm && modalConfirmationIsVisible && 
+                <div className={style.container}>
+                    <ModalConfirmation closeModalAndForm={closeModalAndForm}/>
+                </div>
             }
         </React.Fragment>    
     );
