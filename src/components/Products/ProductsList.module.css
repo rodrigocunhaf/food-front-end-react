@@ -36,9 +36,63 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 782px;
+    min-height: 66.3vh;
     max-width: 1920px;
     width: 100%;
+    font-size: 30px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    color: #04a6f5;
+    text-align: center;
+}
+
+.loading img{
+    max-width: 100px;
+    margin-bottom: 10px;
+    animation: rotationImage;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+@keyframes rotationImage {
+    from{ 
+        transform: rotate(0deg);;
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading p {
+    margin-left: 15px;
+    animation-name: opacityText;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes opacityText{
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+.error{
+    min-height: 69.4vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+
+@media screen and (max-width:360px){
+    .error{
+        font-size: 30px
+    }
 }
 
 

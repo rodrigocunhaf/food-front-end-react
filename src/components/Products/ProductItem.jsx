@@ -58,7 +58,7 @@ const ProductItem = ( props ) => {
     return ( 
         <li className={classCSS}>
             <div className={style.boxImage}>
-                <img src={props.image}/>
+                <img src={props.image} alt={props.name}/>
                 <ProductDescription isVisible={infoIsVisible}/>
             </div>
             <div className={style.boxInfo}>

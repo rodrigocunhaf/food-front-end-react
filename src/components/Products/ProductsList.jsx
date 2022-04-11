@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useHttpRequest } from "../../hooks/use-http-request";
 import { ProductItem } from "./ProductItem";
+import loadingImage from "../../assets/icons/loading.png";
 import style from "./ProductsList.module.css";
 
 const ProductsList = ( ) => {
@@ -37,7 +38,14 @@ const ProductsList = ( ) => {
             { <ul className={style.container}>
                 { !loading ? products.map ( product=> {
                     return <ProductItem key={product.id} id={product.id} name={product.name} price={product.price} image={product.image} move={moveRight} />
-                }): <div className={style.loading}>LOADING</div> }
+                }): <div className={style.loading}>
+                        <img src={loadingImage} alt={'loading...'}/>
+                        <p>Loading...</p>
+                    </div> }
+                {
+                    !loading && products.length === 0 && 
+                    <div className={style.error}>Something went wrong.</div>
+                }
             </ul> }
             <button onMouseEnter={goToRight}  className={style.buttonRight}>{'>'}</button>
         </div>)

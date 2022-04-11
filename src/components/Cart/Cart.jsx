@@ -16,7 +16,9 @@ const Cart = ( ) => {
             <React.Fragment>
                 <button onClick={onClickCartVisibility} 
                         className={style.buttonCart}><img className={style.imageCart} 
-                                                              src={cartIcon}/></button>
+                                                              src={cartIcon}
+                                                              alt={'cart'}
+                                                              /></button>
             </React.Fragment>
             <CartList isVisible={cartListIsVisible} onClickEvent={onClickCartVisibility }/>
         </div>

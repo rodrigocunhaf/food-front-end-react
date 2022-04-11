@@ -49,7 +49,7 @@ const CartList = ( props ) => {
                                                                                 removeItem={cartContext.removeOneItem} 
                                                                                 addItem={cartContext.addOneItem}/>})}</ul> : <div className={style.notFound}>
                                                                                                                                 <p>There are no products found in your cart.</p>
-                                                                                                                                <img src={cartNotFound}/>
+                                                                                                                                <img src={cartNotFound} alt={'Not found cart.'}/>
                                                                                                                             </div> }
                         <div className={style.buyInfo}>
                             <CartResume buttonName={'Purchase'} 

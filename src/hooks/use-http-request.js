@@ -6,7 +6,7 @@ const useHttpRequest = () => {
     const [ isLoading, setIsLoading ] =  useState(false)
 
     const  requestHttp  = useCallback ( async (url,method , data , functionState) => {
-
+        
         try {
             setIsLoading(true);
             await axios({
@@ -17,17 +17,16 @@ const useHttpRequest = () => {
                 if ( functionState ){
                     functionState(response.data);
                 }
-                return response
-            }).then ( response => {
+            }).then ( () => {
                 setTimeout ( ( ) => {
                     setIsLoading(false);
                 },2000);
-
-                
             })
 
         } catch ( err ) {
-            console.log(err)
+            setTimeout ( ( ) => {
+                setIsLoading(false);
+            },2000);
         }
     },[]);
     
